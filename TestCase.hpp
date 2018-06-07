@@ -16,11 +16,7 @@ class TestCase{
 			name=s;
 		}
 		
-		TestCase& print(){
-			my_cerr<<name<<": "<<fails<<" failed, "<<success<<" passed, "<<fails+success<<" total."<<endl;
-			my_cerr<<"---"<<endl;
-			return (*this);
-		}
+		TestCase& print();
 
 
 		template <typename T> TestCase& check_equal(T r1,T r2){
