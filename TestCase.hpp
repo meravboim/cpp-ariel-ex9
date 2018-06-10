@@ -1,0 +1,67 @@
+#pragma once
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+
+class TestCase{
+ 	int fails=0;
+	int success=0;
+	ostream& my_cerr;
+	string name;
+	public:
+	
+		TestCase(string s, ostream& c):my_cerr(c){
+			name=s;
+		}
+		
+		TestCase& print();
+
+
+		template <typename T> TestCase& check_equal(T r1,T r2){
+			if(r1==r2)
+				success++;
+			else{
+				fails++;
+				cout<<name<<": Failure in test #"<< fails+success<<" "<<r1<<" should equal "<<r2<<"!"<<endl;
+			}		
+			return (*this);
+		}
+
+		template <typename T>  TestCase& check_different(T r1,T r2){
+			if(r1!=r2)
+				success++;
+			else{
+				fails++;
+				cout<<name<<": Failure in test #"<< fails+success<<" "<<r1<<" is equal "<<r2<<"!"<<endl;
+			}		
+			return (*this);
+			
+		}
+
+		template <typename T> TestCase& check_output(T r, string s){
+			stringstream buf;
+			buf<<r;
+			if(buf.str().compare(s)==0)
+				success++;
+			else{
+				fails++;
+				cout<<name<<": Failure in test #"<< fails+success<<" string value should be "<<s<<" but is "<<buf.str()<<endl;
+			}		
+			return (*this);
+		}
+
+		
+		template <typename T1,typename T2,typename Fun> TestCase& check_function(Fun f, T1 input, T2 output){
+			if((*f)(input)==output)
+				success++;
+			else{
+				fails++;
+				cout<<name<<": Failure in test #"<< fails+success<<" Function should return "<<output<<" but returned "<<(*f)(input)<<"!"<<endl;
+			}		
+			return (*this);
+			
+		}
+		
+};
