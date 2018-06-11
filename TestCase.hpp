@@ -24,7 +24,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"shouldequal"<<r2<<"!"<<endl;
+				my_cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"shouldequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 		}
@@ -34,7 +34,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"isequal"<<r2<<"!"<<endl;
+				my_cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"isequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 			
@@ -47,7 +47,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cerr<<name<<":Failureintest#"<< fails+success<<"stringvalueshouldbe "<<s<<"butis"<<buf.str()<<endl;
+				my_cerr<<name<<":Failureintest#"<< fails+success<<"stringvalueshouldbe "<<s<<"butis"<<buf.str()<<endl;
 			}		
 			return (*this);
 		}
@@ -58,7 +58,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cerr<<name<<":Failureintest#"<< fails+success<<"Functionshouldreturn"<<output<<"butreturned"<<(*f)(input)<<"!"<<endl;
+				my_cerr<<name<<":Failureintest#"<< fails+success<<"Functionshouldreturn"<<output<<"butreturned"<<(*f)(input)<<"!"<<endl;
 			}		
 			return (*this);
 			
