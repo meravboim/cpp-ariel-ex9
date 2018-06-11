@@ -34,7 +34,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<": Failure in test #"<< fails+success<<" "<<r1<<" is equal "<<r2<<"!"<<endl;
+				cout<<name<<":Failureintest#"<< fails+success<<""<<r1<<"isequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 			
@@ -47,7 +47,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<": Failure in test #"<< fails+success<<" string value should be "<<s<<" but is "<<buf.str()<<endl;
+				cout<<name<<":Failureintest#"<< fails+success<<"stringvalueshouldbe "<<s<<"butis"<<buf.str()<<endl;
 			}		
 			return (*this);
 		}
@@ -58,7 +58,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<": Failure in test #"<< fails+success<<" Function should return "<<output<<" but returned "<<(*f)(input)<<"!"<<endl;
+				cout<<name<<":Failureintest#"<< fails+success<<"Functionshouldreturn"<<output<<"butreturned"<<(*f)(input)<<"!"<<endl;
 			}		
 			return (*this);
 			
