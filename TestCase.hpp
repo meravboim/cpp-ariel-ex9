@@ -24,7 +24,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<": Failure in test #"<< fails+success<<" "<<r1<<" should equal "<<r2<<"!"<<endl;
+				cout<<name<<":Failureintest#"<< fails+success<<""<<r1<<"shouldequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 		}
