@@ -24,7 +24,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<":Failureintest#"<< fails+success<<""<<r1<<"shouldequal"<<r2<<"!"<<endl;
+				cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"shouldequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 		}
@@ -34,7 +34,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<":Failureintest#"<< fails+success<<""<<r1<<"isequal"<<r2<<"!"<<endl;
+				cerr<<name<<":Failureintest#"<< fails+success<<""<<r1<<"isequal"<<r2<<"!"<<endl;
 			}		
 			return (*this);
 			
@@ -47,7 +47,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<":Failureintest#"<< fails+success<<"stringvalueshouldbe "<<s<<"butis"<<buf.str()<<endl;
+				cerr<<name<<":Failureintest#"<< fails+success<<"stringvalueshouldbe "<<s<<"butis"<<buf.str()<<endl;
 			}		
 			return (*this);
 		}
@@ -58,7 +58,7 @@ class TestCase{
 				success++;
 			else{
 				fails++;
-				cout<<name<<":Failureintest#"<< fails+success<<"Functionshouldreturn"<<output<<"butreturned"<<(*f)(input)<<"!"<<endl;
+				cerr<<name<<":Failureintest#"<< fails+success<<"Functionshouldreturn"<<output<<"butreturned"<<(*f)(input)<<"!"<<endl;
 			}		
 			return (*this);
 			
